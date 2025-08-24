@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #ffffff;
+  color: #222;
+}
+
+header {
+  background: #b30000; 
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-bottom: 3px solid #d4af37; 
+  box-shadow: 0 2px 10px rgba(179,0,0,0.3);
+}
+
+main {
+  flex: 1;
+  padding: 30px 5%;
+}
+
+.song-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+   min-height: 80vh; 
+}
+
+.song-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  text-align: center;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.song-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  border-color: #d4af37;
+  box-shadow: 0 6px 18px rgba(212,175,55,0.4);
+}
+
+.song-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.song-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #b30000;
+  margin-bottom: 5px;
+}
+
+.song-card p {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.pagination {
+  text-align: center;
+  margin: 30px 0 120px 0;
+}
+
+.pagination button {
+  margin: 0 10px;
+  padding: 10px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #b30000;
+  color: white;
+  border: 2px solid transparent;
+}
+
+.pagination button:hover {
+  background: #a00000;
+  border: 2px solid #d4af37;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(179,0,0,0.3);
+}
+
+#musicPlayerBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.95);
+  border-top: 2px solid #d4af37; /* gold top line */
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 -4px 15px rgba(179,0,0,0.2);
+}
+
+#musicPlayerBar div {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #b30000;
+}
+
+#musicPlayerBar audio {
+  accent-color: #b30000;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #b30000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 2px solid #d4af37;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
+}
